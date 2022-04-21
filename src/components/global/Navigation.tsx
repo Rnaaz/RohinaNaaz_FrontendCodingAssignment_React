@@ -1,11 +1,13 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "./Navigation.css"
+import "./Navigation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilm} from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   return (
     <Container className="d-flex" style={{ padding: "10px 0px" }}>
-      <Navbar.Brand>Movies-App</Navbar.Brand>
+      <Navbar.Brand><FontAwesomeIcon className="me-2" style={{color:"#1E2F97"}} icon={faFilm} />Movies-App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

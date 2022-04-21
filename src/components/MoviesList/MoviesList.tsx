@@ -66,7 +66,8 @@ const MoviesList = (props: Props) => {
             const favouriteMoviesList = await getMovieListFromServer('favourite');
             const movieAlreadyExist = favouriteMoviesList.filter(data => data.title === movie.title);
             if (movieAlreadyExist.length === 0) {
-                const data = await addToFavourite(movie);
+                const { id, ...movieWithoutId } = movie;
+                const data = await addToFavourite(movieWithoutId);
                 setToaster([...toaster, { toast_status: 'Success', toast_msg: 'Successfully added to favourite' }]);
             }
             else {
