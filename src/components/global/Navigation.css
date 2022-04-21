@@ -1,0 +1,8 @@
+.nav-link.active {
+    color: rgb(10, 10, 241) !important;
+    border-bottom: 1px solid rgb(10, 10, 241);
+}
+
+.nav-link {
+    margin-right: 15px !important;
+}
